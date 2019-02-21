@@ -19,7 +19,7 @@ for i in td:
 keys_of_dict.insert(0, " ")
 
 table1 = soup.find("table", id="tableContent")
-result = []
+value_of_dict = []
 id_list = ['01', '02', '10', '10', '11', '20', '21', '22', '23', '24', '25', '26', '30', '31', '32', '40', '50', '51', '52', '60', '61', '62', '70', '80', '81']
 
 for i in id_list:
@@ -29,17 +29,17 @@ for i in id_list:
     for x in td_list:
         t = x.get_text()
         line1.append(t)
-    result.append(line1)
+    value_of_dict.append(line1)
 
 
 lines = []
-for i in range(len(result)):
+for i in range(len(value_of_dict)):
     new_line = {
-        keys_of_dict[0]: result[i][0],
-        keys_of_dict[1]: result[i][1],
-        keys_of_dict[2]: result[i][2],
-        keys_of_dict[3]: result[i][3],
-        keys_of_dict[4]: result[i][4],
+        keys_of_dict[0]: value_of_dict[i][0],
+        keys_of_dict[1]: value_of_dict[i][1],
+        keys_of_dict[2]: value_of_dict[i][2],
+        keys_of_dict[3]: value_of_dict[i][3],
+        keys_of_dict[4]: value_of_dict[i][4],
     }
     lines.append(new_line)
 pyexcel.save_as(records = lines, dest_file_name = "table.xlsx")
