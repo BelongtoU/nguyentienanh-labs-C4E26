@@ -1,0 +1,15 @@
+1. - organize program to smaller pieces to do particalar tasks
+   - ease to reuse and reduce
+2. - to define a function, do something like:
+	def <function_name> (<arguments>): # maybe no arguments
+	    #some statements in here  
+3. - to call a function:
+	<function_name>(<arguments>) #or no arguments
+4. - return is a statement to give the program want when call the functions
+(maybe a boolean value, a string, a interger number, ...)  
+     use it when we want our function give us something not only excute a block statement
+     to use return statement, we write it in the end of the function 
+5. - no, we don't
+6. - the easest way to do this is copying then pasting a part of the other file where contains the defining of function =))
+Just kidding =))
+     to do that, we imagine the file contains the function we want use is a module and use import statement to import that module then call the function normally =))
